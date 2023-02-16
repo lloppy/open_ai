@@ -27,6 +27,6 @@ class AimyboxApplication : Application(), AimyboxProvider {
         val dialogApi = AimyboxDialogApi(AIMYBOX_API_KEY, unitId)
 
         val aimyboxConfig = Config.create(speechToText, textToSpeech, dialogApi)
-        return Aimybox(aimyboxConfig)
+        return Aimybox(aimyboxConfig, context)
     }
 }
